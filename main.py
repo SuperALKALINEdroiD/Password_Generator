@@ -1,17 +1,37 @@
 # import string module
 import string
+# import random module
+import random
 
 # set of Uppercase and Lowercase characters
 set1 = string.ascii_letters
-print(set1)
 
 # set of numbers 0-9
 set2 = string.digits
-print(set2)
 
 # set of special characters
 set3 = string.punctuation
-print(set3)
+
+# convert String to list
+
+ls1 = list(set1)
+ls2 = list(set2)
+ls3 = list(set3)
+
+pass_glossary = []
+
+# list1.extend(list2) ===> Similar to appending list but doesnot create list within list
+
+pass_glossary.extend(ls1)
+pass_glossary.extend(ls2)
+pass_glossary.extend(ls3)
+
+pass_len = int(input("Enter Password Length: "))
+
+o_list = random.sample(pass_glossary, pass_len)
+
+o_str = ''.join(o_list)  # ===> join the elements of password list to give a String
+print("Your Password: ", o_str)
 
 
 
