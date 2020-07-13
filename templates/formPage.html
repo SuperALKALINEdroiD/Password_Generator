@@ -4,10 +4,53 @@
     <meta charset="UTF-8">
     <title>PassZen</title>
 </head>
-<body>
-<header><h1>code: passZen</h1></header>
+<style>
+#top{
+    font-family: 'Bangers', cursive;
+    background: black;
+    color:white;
+    height:100px;
+    animation-name : titleText;
+    animation-duration : 10s;
+    animation-iteration-count: infinite;
+    text-align: center;
+}
+@keyframes titleText{
+  10%{
+    color : Orange;
+  }
+  50%{
+    color : grey ;
+  }
+  75%{
+    color :  Pink;
+  }
+  25%{
+    color : White;
+  }
+}
 
-Here is your password:         {{password}}
+#textRegion{
+    height:825px;
+    color: orange;
+    text-align:center;
+    background: black;
+
+
+}
+@media (
+max-width: 100px
+)
+
+</style>
+
+
+<body>
+<header id = "top"><h1>code: passZen</h1></header>
+
+
+<div id ="textRegion">Here is your password:{{password}}</div>
+
 
 </body>
 </html>
