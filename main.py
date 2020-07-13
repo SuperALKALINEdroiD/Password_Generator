@@ -33,13 +33,13 @@ pass_glossary.extend(ls3)
 app = Flask(__name__)
 @app.route('/')
 def front():
-    return 'Welcome'
+    return render_template("MainPage.html")
 @app.route('/pass')
 def passGen():
     o_list = random.sample(pass_glossary, 15)
 
     o_str = ''.join(o_list)  # ===> join the elements of password list to give a String
-    return render_template("formPage.html", password = o_str)
+    return render_template("passPage.html", password = o_str)
 
 
 
