@@ -2,49 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PassZen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>
+        PassZen
+    </title>
 </head>
-<style>
-#top{
-    font-family: 'Bangers', cursive;
-    background: black;
-    color:white;
-    height:100px;
-    animation-name : titleText;
-    animation-duration : 10s;
-    animation-iteration-count: infinite;
-    text-align: center;
-}
-@keyframes titleText{
-  10%{
-    color : Orange;
-  }
-  50%{
-    color : grey ;
-  }
-  75%{
-    color :  Pink;
-  }
-  25%{
-    color : White;
-  }
-}
-
-#textRegion{
-    height:825px;
-    color: orange;
-    text-align:center;
-    background: black;
-
-
-}
-@media (
-max-width: 100px
-)
-
-</style>
-
-
 <body>
 <header id = "top"><h1>code: passZen</h1></header>
 

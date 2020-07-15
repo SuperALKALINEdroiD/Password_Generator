@@ -1,0 +1,36 @@
+#top{
+    font-family: 'Bangers', cursive;
+    background: black;
+    color:white;
+    height:100px;
+    animation-name : titleText;
+    animation-duration : 10s;
+    animation-iteration-count: infinite;
+    text-align: center;
+}
+@keyframes titleText{
+  10%{
+    color : Orange;
+  }
+  50%{
+    color : grey ;
+  }
+  75%{
+    color :  Pink;
+  }
+  25%{
+    color : White;
+  }
+}
+
+#textRegion{
+    height:825px;
+    color: orange;
+    text-align:center;
+    background: black;
+
+
+}
+@media (
+max-width: 100px
+)
