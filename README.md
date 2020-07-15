@@ -1,7 +1,8 @@
 # Password_Generator
 
-Learn along project:
+Learn along project: A password Generator
 
-A password Generator in python with GUI.
 
-AIM: Learn and Use Flask and Deploy.
+AIM: Learn and Use Flask.
+
+Future Plans: Add DataBase
