@@ -11,14 +11,11 @@
 @keyframes titleText{
   10%{
     color : Orange;
-  }
-  50%{
+  }50%{
     color : grey ;
-  }
-  75%{
+  }75%{
     color :  Pink;
-  }
-  25%{
+  }25%{
     color : White;
   }
 }
@@ -29,6 +26,7 @@
     text-align:center;
     background: black;
     padding: 300px;
+    font-size: large;
 }
 #inputField{
     width: 400px;
@@ -38,8 +36,6 @@
 #button:hover{
     width:125px;
     height:30px;
-    border-radius:60px;
-
 }
 @media (
 max-width: 100px

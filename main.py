@@ -3,7 +3,7 @@ import string
 # import random module
 import random
 # import Flask module
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 
 # set of Uppercase and Lowercase characters
 set1 = string.ascii_letters
@@ -31,12 +31,19 @@ pass_glossary.extend(ls3)
 # Maximum possible password length ====> 94
 
 app = Flask(__name__)
-@app.route('/')
+@app.route('/', methods = ["POST", "GET"])
 def front():
-    return render_template("MainPage.html")
-@app.route('/pass')
-def passGen():
-    o_list = random.sample(pass_glossary, 15)
+    if request.method =="POST":
+        passLen = request.form["nm"]
+        return redirect(url_for("passGen", passW = passLen))
+    else:
+        return  render_template("MainPage.html")
+
+@app.route('/<passW>')
+def passGen(passW):
+    passLen = int(passW)
+
+    o_list = random.sample(pass_glossary, passLen)
 
     o_str = ''.join(o_list)  # ===> join the elements of password list to give a String
     return render_template("passPage.html", password = o_str)
